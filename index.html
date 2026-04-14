@@ -152,6 +152,7 @@ nav.scrolled .nav-hamburger span{background:#383431}
 .yt-lightbox-close:hover{opacity:1}
 @media(max-width:600px){.yt-lightbox-inner{width:98%}}
 </style>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -438,5 +439,16 @@ document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>obs.
 
 </script>
 
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", function(user) {
+    if (!user) {
+      window.netlifyIdentity.on("login", function() {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
+</script>
 </body>
 </html>
