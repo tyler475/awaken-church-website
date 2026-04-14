@@ -1,0 +1,17 @@
+{
+  "church_name": "Awaken Church",
+  "tagline": "Know God. Find Freedom. Live On Purpose.",
+  "service_times": "Sundays 9:30am & 11:00am",
+  "address1": "801 West Ave",
+  "address2": "Cartersville, GA 30120",
+  "phone": "(706) 764-4673",
+  "email": "info@myawaken.org",
+  "youtube": "https://youtube.com/@awakencartersville",
+  "facebook": "",
+  "instagram": "",
+  "banner": {
+    "enabled": false,
+    "text": "",
+    "link": ""
+  }
+}
