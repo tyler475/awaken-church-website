@@ -1,0 +1,10 @@
+{
+  "headline": "Your Kids Are Gonna Love It",
+  "intro": "At Awaken Kids, your children newborn through 5th grade will find a safe, clean, and fun place to discover Jesus on their level. First-time families get VIP check-in treatment.",
+  "ages": "Newborn through 5th Grade",
+  "groups": [
+    { "age": "Nursery", "title": "Newborn — 2 Years", "description": "A safe, nurturing environment for your littlest ones while you worship." },
+    { "age": "Preschool", "title": "3 — 5 Years", "description": "Big truths for little hearts. Interactive learning through play, worship, and Bible stories." },
+    { "age": "Elementary", "title": "K — 5th Grade", "description": "Games, worship, and real teaching that connects kids to Jesus and each other." }
+  ]
+}

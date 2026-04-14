@@ -1,0 +1,158 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+site_url: https://adorable-frangipane-306699.netlify.app
+
+logo_url: https://adorable-frangipane-306699.netlify.app/images/uploads/logo.png
+
+collections:
+
+  # ── HOMEPAGE ──
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "content/homepage.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Headline Line 1", name: "headline1", widget: "string", default: "Finding a Church Home" }
+              - { label: "Headline Line 2 (Teal)", name: "headline2", widget: "string", default: "Shouldn't Be Hard" }
+              - { label: "Subtext", name: "subtext", widget: "text", default: "We're a church family in Bartow County helping people Know God, Find Freedom, and Live On Purpose." }
+              - { label: "Hero Background Photo", name: "photo", widget: "image", required: false }
+              - { label: "Service Times", name: "times", widget: "string", default: "Sundays 9:30 & 11am" }
+              - { label: "Location", name: "location", widget: "string", default: "Cartersville, GA" }
+
+          - label: "Awaken Kids Section"
+            name: "kids"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", default: "Your Kids Are Gonna Love It" }
+              - { label: "Body Text", name: "body", widget: "text", default: "At Awaken Kids, your children newborn through 5th grade will find a safe, clean, and fun place to discover Jesus on their level." }
+              - { label: "Kids Photo 1", name: "photo1", widget: "image", required: false }
+              - { label: "Kids Photo 2", name: "photo2", widget: "image", required: false }
+
+          - label: "Latest Sermon"
+            name: "sermon"
+            widget: "object"
+            fields:
+              - { label: "Series Name", name: "series", widget: "string", default: "Current Series" }
+              - { label: "Note", name: "note", widget: "string", default: "Sermon title and thumbnail auto-load from YouTube — no changes needed here unless you want to override.", hint: "YouTube auto-populates this section" }
+
+          - label: "Full Bleed CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Line 1", name: "line1", widget: "string", default: "You Just Found" }
+              - { label: "Line 2 (Teal)", name: "line2", widget: "string", default: "Your Family" }
+              - { label: "Background Photo", name: "photo", widget: "image", required: false }
+
+  # ── ABOUT PAGE ──
+  - name: "about"
+    label: "About Page"
+    files:
+      - name: "about"
+        label: "About Page Content"
+        file: "content/about.json"
+        fields:
+          - { label: "Page Headline", name: "headline", widget: "string", default: "We're Glad You Found Us" }
+          - { label: "Page Subtext", name: "subtext", widget: "text", default: "Awaken Church launched in January 2022 in Cartersville, GA with one mission." }
+          - label: "Our Story Section"
+            name: "story"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string", default: "A Church Family, Not a Corporation" }
+              - { label: "Body Text", name: "body", widget: "text" }
+              - { label: "Photo", name: "photo", widget: "image", required: false }
+          - label: "Pastors Section"
+            name: "pastors"
+            widget: "object"
+            fields:
+              - { label: "Pastors Names", name: "names", widget: "string", default: "Tyler & Kayla Harris" }
+              - { label: "Pastor Bio", name: "bio", widget: "text" }
+              - { label: "Pastor Photo", name: "photo", widget: "image", required: false }
+              - { label: "Contact Email", name: "email", widget: "string", default: "tyler@myawaken.org" }
+
+  # ── AWAKEN KIDS PAGE ──
+  - name: "kids"
+    label: "Awaken Kids Page"
+    files:
+      - name: "kids"
+        label: "Awaken Kids Content"
+        file: "content/kids.json"
+        fields:
+          - { label: "Page Headline", name: "headline", widget: "string", default: "Your Kids Are Gonna Love It" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Age Range", name: "ages", widget: "string", default: "Newborn through 5th Grade" }
+          - { label: "Hero Photo", name: "photo", widget: "image", required: false }
+          - label: "Age Groups"
+            name: "groups"
+            widget: "list"
+            fields:
+              - { label: "Age Label", name: "age", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  # ── AWAKEN PATHWAY ──
+  - name: "pathway"
+    label: "Awaken Pathway"
+    files:
+      - name: "pathway"
+        label: "Pathway Steps"
+        file: "content/pathway.json"
+        fields:
+          - label: "Steps"
+            name: "steps"
+            widget: "list"
+            fields:
+              - { label: "Step Number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Button Label", name: "button", widget: "string" }
+              - { label: "Button Link", name: "link", widget: "string" }
+              - { label: "Background Photo", name: "photo", widget: "image", required: false }
+
+  # ── CPUs PAGE ──
+  - name: "cpus"
+    label: "CPUs — Community PopUps"
+    files:
+      - name: "cpus"
+        label: "CPUs Content"
+        file: "content/cpus.json"
+        fields:
+          - { label: "Page Headline", name: "headline", widget: "string", default: "Find Your People" }
+          - { label: "Intro Text", name: "intro", widget: "text", default: "CPUs are how we do life together outside of Sunday." }
+          - { label: "Note", name: "note", widget: "string", default: "Groups auto-load from Planning Center. Use this section to update the page intro only.", hint: "Groups are pulled live from Planning Center" }
+
+  # ── SITE SETTINGS ──
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "settings"
+        label: "Global Settings"
+        file: "content/settings.json"
+        fields:
+          - { label: "Church Name", name: "church_name", widget: "string", default: "Awaken Church" }
+          - { label: "Tagline", name: "tagline", widget: "string", default: "Know God. Find Freedom. Live On Purpose." }
+          - { label: "Service Times", name: "service_times", widget: "string", default: "Sundays 9:30am & 11:00am" }
+          - { label: "Address Line 1", name: "address1", widget: "string", default: "801 West Ave" }
+          - { label: "Address Line 2", name: "address2", widget: "string", default: "Cartersville, GA 30120" }
+          - { label: "Phone", name: "phone", widget: "string", default: "(706) 764-4673" }
+          - { label: "Email", name: "email", widget: "string", default: "info@myawaken.org" }
+          - { label: "YouTube Channel", name: "youtube", widget: "string", default: "https://youtube.com/@awakencartersville" }
+          - { label: "Facebook URL", name: "facebook", widget: "string", default: "" }
+          - { label: "Instagram URL", name: "instagram", widget: "string", default: "" }
+          - label: "Announcement Banner"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Show Banner", name: "enabled", widget: "boolean", default: false }
+              - { label: "Banner Text", name: "text", widget: "string", default: "" }
+              - { label: "Banner Link", name: "link", widget: "string", default: "" }

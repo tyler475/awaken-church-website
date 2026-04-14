@@ -1,0 +1,8 @@
+{
+  "steps": [
+    { "number": "01", "title": "Start Here", "description": "New to Awaken? Come meet us and learn what this family is all about.", "button": "Register", "link": "https://awakenbartow.churchcenter.com/registrations" },
+    { "number": "02", "title": "Saved Here", "description": "Ready for baptism or want to deepen your faith? This step is waiting.", "button": "Learn More", "link": "https://awakenbartow.churchcenter.com/people/forms" },
+    { "number": "03", "title": "Serve Here", "description": "Discover how you're wired and find your spot on the team.", "button": "Get Involved", "link": "https://myawaken.org/serve" },
+    { "number": "04", "title": "Stay Here", "description": "Membership is a commitment to this community and mission.", "button": "Join Us", "link": "https://awakenbartow.churchcenter.com/registrations" }
+  ]
+}
